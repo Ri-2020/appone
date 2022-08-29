@@ -25,12 +25,22 @@ const data = [{
 app.get('/:name', (req, res) => {
   // res.send(`${name}`);
   const requireddata = data.filter((item) => item.name === req.params.name);
+  var sending = requireddata[0].stars;
+  if (sending === null){
+    sending = "no data";
+  }
+  var fakeJson = {
+    "name": sending,
+  }
+  res.json(fakeJson);
 
-  requireddata.length !=0 ? res.send(`${requireddata[0].stars}`) : res.send('No data found');
+  // requireddata.length !=0 ? res.send(fakeJson).status(200) : res.send('No data found');
+
 
   // we need to send the string in the response
   // if we send the number as response it takse the numer as a status code
 })
+
 
 
 app.get('/', (req, res , next) => {
