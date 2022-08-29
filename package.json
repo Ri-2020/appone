@@ -1,0 +1,15 @@
+{
+  "name": "appone",
+  "version": "1.0.0",
+  "description": "this is a express app for my unserstandong",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
