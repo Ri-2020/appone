@@ -25,9 +25,11 @@ const data = [{
 app.get('/:name', (req, res) => {
   // res.send(`${name}`);
   const requireddata = data.filter((item) => item.name === req.params.name);
-  var sending = requireddata[0].stars;
-  if (sending === null){
-    sending = "no data";
+
+  if (requireddata.length ==0){
+    var sending = "no data";
+  }else{
+    var sending = requireddata[0].stars;
   }
   var fakeJson = {
     "name": sending,
