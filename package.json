@@ -4,12 +4,16 @@
   "description": "this is a express app for my unserstandong",
   "main": "index.js",
   "scripts": {
-    "test": "start"
+    "start": "nodemon app.js",
+    "test": "echo \"Error:no test sperified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.1",
+    "express": "^4.18.1"
+    
+  },
+  "devDependencies": {
     "nodemon": "^2.0.19"
   }
 }
